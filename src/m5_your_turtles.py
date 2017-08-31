@@ -2,15 +2,15 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Mary Ashley Samuelson.
 """
 ########################################################################
-# TODO: 1.
+# DONE: 1.
 # On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ########################################################################
 
 ########################################################################
-# TODO: 2.
+# DONE: 2.
 #
 #  You should have RUN the PREVIOUS module and READ its code.
 #  (Do so now if you have not already done so.)
@@ -28,3 +28,32 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 #  Don't forget to COMMIT your work by using  VCS ~ Commit and Push.
 ########################################################################
+import rosegraphics as rg
+
+window = rg.TurtleWindow()
+
+sally = rg.SimpleTurtle('turtle')
+pColor = ['red', 'orange', 'yellow', 'green', 'blue']
+sally.speed = 25
+
+for i in range(5):
+    sally.pen = rg.Pen(pColor[i], 5)
+    #draw a pentagon
+    sally.pen_down()
+    sally.right(72)
+    sally.forward(50)
+    sally.right(72)
+    sally.forward(50)
+    sally.right(72)
+    sally.forward(50)
+    sally.right(72)
+    sally.forward(50)
+    sally.right(72)
+    sally.forward(50)
+
+    #new pentagon starting position
+    sally.pen_up()
+    sally.left(72)
+    sally.forward(50)
+
+window.close_on_mouse_click()
